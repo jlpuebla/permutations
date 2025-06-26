@@ -12,7 +12,16 @@ public class Permutations {
     public static void main(String[] args) {
 
         int n = getUserInput("Please enter value of n (where 0 < n < 10)", 1, 9);
+
+        // Exit if the user chooses to quit at the first prompt
+        if (n == -1)
+            return;
+
         int r = getUserInput("Please enter value of r (where 0 ≤ r ≤ " + n + ")", 0, n);
+
+        // Exit if the user chooses to quit at the second prompt
+        if (r == -1)
+            return;
 
         if (n > 0 && r >= 0) {
             String string = generateString(n);
